@@ -1,5 +1,14 @@
-<h1>Aplicacion</h1>
-
-<a [routerLink]="['/home']">Home</a>
-<a [routerLink]="['/post']"> Post</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" [routerLink]="['/home']">Empresa</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a [routerLink]="['/home']" class="nav-item nav-link" [routerLinkActive]="['active']">Home </a>
+            <a [routerLink]="['/post']" class="nav-item nav-link" [routerLinkActive]="['active']">Post</a>
+        </div>
+    </div>
+</nav>
 <router-outlet></router-outlet>

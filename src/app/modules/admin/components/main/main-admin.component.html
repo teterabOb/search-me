@@ -1,0 +1,22 @@
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-lg-4">
+            <h3>{{title}}</h3>
+            <ul class="nav flex-column nav-pills">
+                <li class="nav-item">
+                    <a [routerLink]="['list']" [routerLinkActive]="['active']" class="nav-link">Listar</a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['add']" [routerLinkActive]="['active']" class="nav-link">Crear</a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['edit']" [routerLinkActive]="['active']" class="nav-link">Editar</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-8">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
