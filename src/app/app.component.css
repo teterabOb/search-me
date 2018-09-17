@@ -1,0 +1,9 @@
+.navbar-nav .active{
+    border-bottom: 3px solid orange !important;
+}
+.navbar-nav >a{
+    border-bottom: 3px solid transparent ;
+}
+.pointer{
+    cursor: pointer;
+}
