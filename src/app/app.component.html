@@ -9,6 +9,41 @@
             <a [routerLink]="['/home']" class="nav-item nav-link" [routerLinkActive]="['active']">Home </a>
             <a [routerLink]="['/post']" class="nav-item nav-link" [routerLinkActive]="['active']">Post</a>
         </div>
+
+        <div class="nav navbar-nav navbar-right" *ngIf="!identity">
+
+            <a [routerLink]="['/register']" [routerLinkActive]="['active']" class="nav-item nav-link">
+                <span>
+                    Register
+                </span>
+            </a>
+
+            <a [routerLink]="['/login']" [routerLinkActive]="['active']" class="nav-item nav-link">
+                <span>
+                    Login
+                </span>
+            </a>
+
+        </div>
+
+        <div class="nav navbar-nav navbar-right" *ngIf="identity">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    {{identity.name}}
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a [routerLink]="['/profile']">Mis datos</a>
+                    </li>
+                    <li>
+                        <a class="pointer" (click)="logout()">Cerrar Sesión</a>
+                    </li>
+                </ul>
+
+            </li>
+        </div>
     </div>
+
 </nav>
 <router-outlet></router-outlet>
